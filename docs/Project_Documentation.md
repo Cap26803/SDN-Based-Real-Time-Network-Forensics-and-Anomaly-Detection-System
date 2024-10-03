@@ -63,17 +63,16 @@ This project aims to develop an SDN-based system that provides real-time network
 
 ## 6. System Architecture
 
-The architecture of the SDN-Based Real-Time Network Forensics and Anomaly Detection System consists of several key components working in conjunction to provide comprehensive monitoring, detection, and response capabilities. The following diagram illustrates the high-level architecture:
+The architecture of the SDN-Based Real-Time Network Forensics and Anomaly Detection System consists of several key components working in conjunction to provide comprehensive monitoring, detection, and response capabilities. The following diagrams illustrate the high-level architecture:
 
-1. **Context Diagram**
+### 6.1 Context Diagram
 ![NFAD-Context-Diagram](https://github.com/user-attachments/assets/41f3f65e-2f78-4cda-9fea-9c12eb9b6840)
 
-2. **Activity Diagram**
+### 6.2 Activity Diagram
 ![NFAD-Activity-Diagram](https://github.com/user-attachments/assets/4131bb92-eec7-48a9-840d-28e6c9ae58eb)
 
-3. **Sequence Diagram**
+### 6.3 Sequence Diagram
 ![NFAD-Sequence-Diagram](https://github.com/user-attachments/assets/e28cacbd-e90e-4cc1-b403-aa9af3cfe74f)
-
 
 ### Components:
 
