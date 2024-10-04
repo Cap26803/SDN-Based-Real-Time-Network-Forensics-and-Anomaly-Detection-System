@@ -1,0 +1,16 @@
+# Web framework for the dashboard
+Django>=3.2,<4.0
+# OR
+Flask>=2.0,<3.0
+
+# For SDN controller
+ryu>=4.30.0
+
+# For network simulation
+mininet>=2.3.0
+
+# For network packet manipulation and analysis
+scapy>=2.4.5
+
+# For capturing and analyzing packets
+pyshark>=0.4.0
