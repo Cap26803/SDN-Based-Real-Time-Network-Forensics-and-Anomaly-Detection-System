@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDN-Based Real-Time Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .alert {
+            padding: 20px;
+            background-color: #f44336; /* Red */
+            color: white;
+            margin-bottom: 15px;
+        }
+        .alert a {
+            color: white;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        .info {
+            padding: 20px;
+            background-color: #2196F3; /* Blue */
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Real-Time Detection Dashboard</h1>
+    {% if alert %}
+    <div class="alert">
+        <strong>Alert!</strong> Potential DDoS attack detected.
+        <br>
+        <a href="/logs">Click here</a> to view detailed logs.
+    </div>
+    {% else %}
+    <div class="info">
+        <strong>No active threats detected.</strong>
+    </div>
+    {% endif %}
+</body>
+</html>
+
