@@ -40,3 +40,8 @@ This project leverages Software-Defined Networking (SDN) principles to monitor, 
    - Dynamic charts show SYN flood rates and attack sources in real-time.
 
 ---
+### Contributors:
+   - Chinmay Paranjape
+   - Chandsab Engineer
+   - Kushal Kaparatti
+   - Prathamesh Chitnis
