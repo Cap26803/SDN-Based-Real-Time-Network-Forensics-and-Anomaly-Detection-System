@@ -1,33 +1,50 @@
 from flask import Flask, render_template, jsonify
-import os
 import json
+import time
+import os
 
 app = Flask(__name__)
 
 # Path to the JSON log file
 LOG_FILE = "/home/chinmay/Projects/SDN-Based-Real-Time-Network-Forensics-and-Anomaly-Detection-System/src/logs/detection_logs.json"
 
-@app.route('/')
-def home():
-    """Homepage with alert if logs exist."""
-    alert = False
-    if os.path.exists(LOG_FILE) and os.path.getsize(LOG_FILE) > 0:
-        alert = True
-    return render_template('index.html', alert=alert)
+# Ensure the log file exists and is initialized
+def initialize_log_file():
+    if not os.path.exists(LOG_FILE) or os.path.getsize(LOG_FILE) == 0:
+        with open(LOG_FILE, 'w') as f:
+            json.dump([], f)
 
-@app.route('/logs', methods=['GET'])
-def get_logs():
-    """Fetch logs from the JSON log file."""
+# Endpoint to serve real-time data for chart updates
+@app.route('/realtime_data')
+def realtime_data():
     try:
-        if os.path.exists(LOG_FILE) and os.path.getsize(LOG_FILE) > 0:
-            with open(LOG_FILE, 'r') as f:
-                logs = json.load(f)
-            return jsonify(logs), 200
-        else:
-            return jsonify({"message": "No logs available"}), 200
+        with open(LOG_FILE, 'r') as f:
+            logs = json.load(f)
+            if logs:
+                # Return only the latest log entry
+                return jsonify(logs[-1])
+            else:
+                return jsonify({})
     except Exception as e:
-        return jsonify({"error": f"Error reading logs: {e}"}), 500
+        return jsonify({"error": str(e)})
+        
+# Endpoint to serve logs
+@app.route('/logs')
+def logs():
+    try:
+        with open(LOG_FILE, 'r') as f:
+            logs = json.load(f)
+        return jsonify(logs)
+    except Exception as e:
+        return f"Error reading logs: {e}", 500
+
+
+# Endpoint to serve the index page
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    initialize_log_file()  # Initialize the log file at the start
+    app.run(debug=True, host='0.0.0.0', port=5000)  # Run Flask app
 

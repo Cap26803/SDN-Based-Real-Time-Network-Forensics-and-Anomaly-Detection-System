@@ -19,18 +19,21 @@ os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
 start_time = time.time()
 
 def initialize_log_file():
-    """Ensure the log file starts with valid JSON and set permissions."""
+    """Ensure the log file starts with valid JSON and has 777 permissions."""
     if not os.path.exists(LOG_FILE) or os.path.getsize(LOG_FILE) == 0:
         print(f"Initializing log file: {LOG_FILE}")
         with open(LOG_FILE, 'w') as f:
             json.dump([], f)
-        # Set permissions to 777
+        # Set the file's permissions to 777
         os.chmod(LOG_FILE, 0o777)
-        print(f"Set permissions to 777 for log file: {LOG_FILE}")
 
 def write_to_log(log_entry):
-    """Append a log entry to the JSON log file."""
+    """Append a log entry to the JSON log file and print it to the terminal."""
     try:
+        # Print to the terminal
+        print(json.dumps(log_entry, indent=4))
+        
+        # Write to the log file
         with open(LOG_FILE, 'r+') as f:
             logs = json.load(f)  # Load existing logs
             logs.append(log_entry)  # Add the new entry
@@ -68,3 +71,4 @@ initialize_log_file()
 
 print("Starting real-time DDoS detection and logging on host 8...")
 sniff(iface='h8-eth0', prn=analyze_packet)
+
