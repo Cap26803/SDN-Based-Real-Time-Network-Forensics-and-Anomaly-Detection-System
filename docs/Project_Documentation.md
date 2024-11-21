@@ -106,7 +106,7 @@ This project leverages SDN technology to offer real-time network forensics and a
 ---
 
 ### Contributors:
-    - Chinmay Paranjape
-    - Chandsab Engineer
-    - Kushal Kaparatti
-    - Prathamesh Chitnis
+   - Chinmay Paranjape
+   - Chandsab Engineer
+   - Kushal Kaparatti
+   - Prathamesh Chitnis
