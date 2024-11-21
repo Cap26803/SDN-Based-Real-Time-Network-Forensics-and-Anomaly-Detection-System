@@ -6,7 +6,7 @@ This document provides a comprehensive overview of the project, including its pr
 
 ## 1. Introduction
 
-In today’s increasingly interconnected world, the security of network infrastructures is paramount. This project addresses the need for proactive security measures by leveraging Software-Defined Networking (SDN) to monitor network traffic in real-time, detect anomalies, and automate threat mitigation. With a web-based dashboard, the system provides intuitive visualization and forensic analysis capabilities.
+In today’s increasingly interconnected world, the security of network infrastructures is paramount. This project addresses the need for proactive security measures by leveraging Software-Defined Networking (SDN) to monitor network traffic in real-time and detect anomalies. With a web-based dashboard, the system provides intuitive visualization and forensic analysis capabilities.
 
 ---
 
@@ -41,11 +41,7 @@ This project aims to develop an SDN-based system that provides real-time network
    
 2. **Anomaly Detection**: The system must detect security anomalies such as DDoS attacks and port scans.
 
-3. **Automated Response**: Upon detecting an anomaly, the SDN controller should modify flow rules to block or mitigate malicious traffic.
-
-4. **Web Dashboard**: The system must provide a web-based dashboard that visualizes traffic data, displays alerts, and enables forensic analysis.
-
-5. **API for External Integration**: The system should expose APIs to allow external systems or tools to retrieve traffic logs and anomaly alerts.
+3. **Web Dashboard**: The system must provide a web-based dashboard that visualizes traffic data, displays alerts, and enables forensic analysis.
 
 ### 5.2 Non-Functional Requirements
 
@@ -63,35 +59,39 @@ This project aims to develop an SDN-based system that provides real-time network
 
 ## 6. System Architecture
 
-The architecture of the SDN-Based Real-Time Network Forensics and Anomaly Detection System consists of several key components working in conjunction to provide comprehensive monitoring, detection, and response capabilities. The following diagrams illustrate the high-level architecture:
+The architecture of the SDN-Based Real-Time Network Forensics and Anomaly Detection System consists of several key components working in conjunction to provide comprehensive monitoring, detection capabilities. The following diagrams illustrate the high-level architecture:
 
 ### 6.1 Context Diagram
-![NFAD-Context-Diagram](https://github.com/user-attachments/assets/41f3f65e-2f78-4cda-9fea-9c12eb9b6840)
+![NFAD-Context-Diagram](https://github.com/user-attachments/assets/31ef20c3-965f-4d50-b147-c4c916cac222)
 
 ### 6.2 Activity Diagram
-![NFAD-Activity-Diagram](https://github.com/user-attachments/assets/4131bb92-eec7-48a9-840d-28e6c9ae58eb)
+![NFAD-Activity-Diagram](https://github.com/user-attachments/assets/c254ffc9-af61-452e-900d-befa45d3376d)
 
 ### 6.3 Sequence Diagram
-![NFAD-Sequence-Diagram](https://github.com/user-attachments/assets/e28cacbd-e90e-4cc1-b403-aa9af3cfe74f)
+![NFAD-Sequence-Diagram](https://github.com/user-attachments/assets/d566c6af-6d9e-42a9-ae6c-f578be17410b)
 
 ### Components:
 
 1. **Mininet**: Acts as the virtual network environment, simulating real network scenarios for testing and analysis.
 
-2. **Ryu SDN Controller**: Serves as the central control point for managing the network flow and responding to detected anomalies.
+2. **SDN Controller**: Serves as the central control point for managing the network flow and responding to detected anomalies.
 
 3. **Wireshark**: Utilized for capturing and analyzing network traffic, providing visibility into the flow of data across the network.
 
 4. **Scapy**: Responsible for packet manipulation, including crafting and sending packets to test the network, as well as responding to anomalies detected in the traffic.
 
-5. **Django/Flask Web Dashboard**: Offers a user-friendly interface for visualizing network data, alerts, and facilitating forensic analysis.
+5. **Flask Web Dashboard**: Offers a user-friendly interface for visualizing network data, alerts, and facilitating forensic analysis.
 
 ---
 
 ## 7. Project Summary
 
-This project leverages SDN technology to offer real-time network forensics and anomaly detection. It enhances network security by monitoring and responding to threats like DDoS attacks and port scans. The use of tools like Mininet for simulation, Ryu for control, Wireshark for analysis, and Scapy for response ensures that the system offers robust monitoring and mitigation features. Additionally, the Django/Flask web interface provides easy access to traffic data and alerts, enabling quick responses and comprehensive forensic analysis.
+This project leverages SDN technology to offer real-time network forensics and anomaly detection. It enhances network security by monitoring threats like DDoS attacks or port scans. The use of tools like Mininet for simulation, SDN for control, Wireshark for analysis, and Scapy for traffic generation and anomaly detection ensures that the system offers robust monitoring features. Additionally, the Flask web interface provides easy access to traffic data and alerts, enabling quick responses and comprehensive forensic analysis.
 
 ---
 
-This document serves as the initial foundation for the **SDN-Based Real-Time Network Forensics and Anomaly Detection System** project. It will evolve as the project progresses, adding details about implementation, architecture, and testing.
+### Contributors:
+    - Chinmay Paranjape
+    - Chandsab Engineer
+    - Kushal Kaparatti
+    - Prathamesh Chitnis
