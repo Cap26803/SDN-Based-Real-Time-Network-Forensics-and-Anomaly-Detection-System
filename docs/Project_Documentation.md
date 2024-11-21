@@ -83,8 +83,23 @@ The architecture of the SDN-Based Real-Time Network Forensics and Anomaly Detect
 5. **Flask Web Dashboard**: Offers a user-friendly interface for visualizing network data, alerts, and facilitating forensic analysis.
 
 ---
+## 7. Implementation Details
 
-## 7. Project Summary
+-   **Topology Setup**: The Mininet topology includes multiple hosts and switches controlled by a custom SDN controller.
+-   **Real-Time Monitoring**: The `realtime_attack_detection.py` script captures packets on the target host and logs anomalies.
+-   **Web Interface**: Flask renders dynamic charts using Chart.js for easy threat visualization.
+
+Usage Instructions
+------------------
+
+1.  Set up the Mininet topology and SDN controller.
+2.  Deploy the anomaly detection script on the target host.
+3.  Start the Flask server to visualize network traffic in real-time.
+4.  Use `iperf` or `hping3` to simulate network attacks and observe system responses.
+
+---
+
+## 8. Project Summary
 
 This project leverages SDN technology to offer real-time network forensics and anomaly detection. It enhances network security by monitoring threats like DDoS attacks or port scans. The use of tools like Mininet for simulation, SDN for control, Wireshark for analysis, and Scapy for traffic generation and anomaly detection ensures that the system offers robust monitoring features. Additionally, the Flask web interface provides easy access to traffic data and alerts, enabling quick responses and comprehensive forensic analysis.
 
