@@ -42,7 +42,7 @@ This project leverages Software-Defined Networking (SDN) principles to monitor, 
 ---
 ### Notes:
 
-1.  **Versioning**: The versions provided are stable at the time of writing and compatible with Python 3.10.6 (your current setup). If you prefer the latest versions, consider testing for compatibility.
+1.  **Versioning**: The versions provided are stable at the time of writing and compatible with Python 3.10.6 (my current setup). If you prefer the latest versions, consider testing for compatibility.
 2.  **Optional Libraries**:
     -   If you're not using Flask-WTF or Gunicorn for the dashboard, remove them.
     -   Add libraries specific to your final implementation, such as advanced visualization tools.
