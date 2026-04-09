@@ -2,6 +2,8 @@
 
 This project leverages Software-Defined Networking (SDN) principles to monitor, detect, and respond to network traffic anomalies in real-time. The goal is to enhance network security, provide effective forensic analysis, and offer an intuitive dashboard for visualizing threats dynamically.
 
+## This project is supported by our published research paper on IEEE, which you can access here: [(https://ieeexplore.ieee.org/document/11277788)]
+
 ## Features
 - Real-time network traffic monitoring using Mininet and SDN controllers.
 - Anomaly detection focused on detecting SYN flood DDoS attacks.
